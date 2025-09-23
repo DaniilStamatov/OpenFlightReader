@@ -4,6 +4,7 @@ int main() {
   OpenFlightReader reader("Model_3_ver164.flt");
   try {
     reader.Read();
+    reader.PrintStructure();
   } catch (const std::runtime_error &e) {
     std::cerr << e.what() << std::endl;
     return 1;
